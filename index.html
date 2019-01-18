@@ -17,15 +17,15 @@
             </div>
             <div class="header-search-block">
                 <p>
-                    <input type="search" name="q" placeholder="search on website"> 
-                    <input type="submit" value="search:)">
+                    <input type="search" id="searchText" placeholder="search on website"> 
+                    <input type="button" id="searchTextBtn" value=" ">
                 </p>
             </div>
             <div class="header-mobile-menu">
                 <div class="header-menu-state">
                     <nav role="navigation">
                         <div id="menuToggle">
-                            <input type="checkbox" checked/>
+                            <input type="checkbox" />
                             <span></span>
                             <span></span>
                             <span></span>
@@ -42,23 +42,54 @@
         </header>
         <div class="main-block" id="Home">
             <aside>
-                <div class="aside-list list1">
-                    <h4>Category 1</h4>
-                    <ul>
+                <div class="aside-list">
+                    <h3>Category 1 <span>+</span></h3>
+                    <ul class="aside-list-of-items">
+                        <li><a href="#">some item1</a></li>
+                        <li><a href="#">some item2</a></li>
+                        <li><a href="#">some item3</a></li>
+                        <li><a href="#">some item4</a></li>
+                        <li><a href="#">some item1</a></li>
+                        <li><a href="#">some item2</a></li>
+                        <li><a href="#">some item3</a></li>
+                        <li><a href="#">some item4</a></li>
+                        <li><a href="#">some item1</a></li>
+                        <li><a href="#">some item2</a></li>
+                        <li><a href="#">some item3</a></li>
+                        <li><a href="#">some item4</a></li>
+                    </ul>
+                </div>
+                <div class="aside-list">
+                    <h3>Category 2 <span>+</span></h3>
+                    <ul class="aside-list-of-items">
+                        <li><a href="#">some item1</a></li>
+                        <li><a href="#">some item2</a></li>
+                        <li><a href="#">some item3</a></li>
+                        <li><a href="#">some item4</a></li>
+                    </ul>
+                </div>
+                <div class="aside-list">
+                    <h3>Category 3 <span>+</span></h3>
+                    <ul class="aside-list-of-items">
+                        <li><a href="#">some item1</a></li>
+                        <li><a href="#">some item2</a></li>
+                        <li><a href="#">some item3</a></li>
+                        <li><a href="#">some item4</a></li>
+                        <li><a href="#">some item1</a></li>
+                        <li><a href="#">some item2</a></li>
+                        <li><a href="#">some item3</a></li>
+                        <li><a href="#">some item4</a></li>
+                    </ul>
+                </div>
+                <div class="aside-list">
+                    <h3>Category 4 <span>+</span></h3>
+                    <ul class="aside-list-of-items">
                         <li><a>some item1</a></li>
                         <li><a>some item2</a></li>
                         <li><a>some item3</a></li>
                         <li><a>some item4</a></li>
-                        <li><a>some item5</a></li>
-                        <li><a>some item6</a></li>
-                        <li><a>some item7</a></li>
-                        <li><a>some item8</a></li>
-                        <li><a>some item9</a></li>
-                        <li><a>some item10</a></li>
-                        <li><a>some item11</a></li>
-                        <li><a>some item12</a></li>
                     </ul>
-                </div>
+                </div>    
             </aside>
             <section>
                 <h2>Lorem Ipsum</h2>
@@ -96,5 +127,6 @@
             </div>
         </footer>
     </div>
+<script src='./script/index.js'></script>
 </body>
 </html>

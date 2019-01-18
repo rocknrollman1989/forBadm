@@ -1,19 +1,26 @@
+
 body{
     margin: 0 auto;
     overflow-x: hidden;
-    
+    height: 100%;
+    position: relative;
 }
 .background{
     width: 100%;
     background: url('https://st.depositphotos.com/1373150/3579/v/600/depositphotos_35798573-stock-video-cyclic-background-with-snowflakes-falling.jpg') no-repeat;
     background-size: cover;
+    min-height: 100vh;
 }
 
 /*---------------------------------header------------------------------*/
 header{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: 20px 0;
+    background: rgba(147, 187, 255, 0.5);
+
 }
 
 .header-logo{
@@ -26,8 +33,30 @@ header{
 .header-search-block{
     text-align: center;
     width: 56%;
+
+}
+.header-search-block>p>input{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 30px;
+    background: rgba(79, 144, 255, 0.5);
+
 }
 
+#searchText{
+    border-bottom: rgba(147, 187, 255, 1);
+    width: 200px;
+
+}
+#searchTextBtn{
+    width: 30px;
+    background: rgba(79, 144, 255, 0.5);
+    background-image: url('https://api.icons8.com/download/4419d1ec1dca6b200e6fb61ddefbe620131d2b66/iOS7/PNG/512/Very_Basic/search-512.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-left: -2px;
+}
 .header-mobile-menu{
     width: 10%;
     text-align: center;
@@ -35,6 +64,11 @@ header{
     flex-direction: row;
     justify-content: center;
     align-self: center;
+    margin-top: 5px;
+
+}
+.header-menu-state{
+    margin-top: -40px;
 }
 
 #menu>a{
@@ -49,23 +83,21 @@ header{
 
 #menuToggle{
   display: block;
-  position: relative;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
 }
 
 #menuToggle input{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  cursor: pointer;
-  opacity: 0; 
-  z-index: 2; 
-  -webkit-touch-callout: none;
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: relative;
+    top: 30px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
 }
 
 #menuToggle span{
@@ -74,7 +106,7 @@ header{
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #cdcdcd;
+  background: tomato;
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
@@ -108,16 +140,12 @@ header{
 
 #menu{
   position: absolute;
-  width: 300px;
-  margin: 100px;
+  left: -100%;
   padding: 50px;
-  padding-top: 125px;
-  background: #ededed;
+  background: rgba(79, 144, 255, 0.8);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: 1s;
 }
 
 #menu li{
@@ -126,28 +154,69 @@ header{
 }
 
 #menuToggle input:checked ~ ul{
-  transform: none;
+    left: 50%;
+    margin-left: -92px;
 }
 /*--------------------------------main-block------------------------------------------------
 ----------------------------------------------------------------------------------------------*/
 .main-block{
     display: flex;
     flex-direction: row;
+    padding-bottom: 70px;
 }
 aside{
-    width: 25%;
+    width: 20%;
+    padding-top: 40px;
 }
 aside>.aside-list{
-
-}
-.aside-list>ul>li{
-    height: 18px;
+    margin-left: 25%;
+  
 }
 
+aside>.aside-list>h3{
+    margin: 10px 0;
+}
+aside>.aside-list>h3:hover{
+    cursor: pointer;
+    color: tomato;
+}
+
+.aside-list-of-items{
+    max-height: 0px;
+    transition:  1s;
+}
+
+.aside-list-of-items>li{
+    margin-left: -1000%;
+    transition: 0.7s;
+    list-style-type: none;
+}
+.aside-list-of-items>li>a{
+    color: black;
+    text-decoration: none;
+}
+.aside-list-of-items>li>a:hover{
+    cursor: pointer;
+    color: tomato;
+}
+.aside-list-of-items.open{
+    max-height: 500px;
+    transition:  1s;
+}
+.aside-list-of-items.open>li{
+    margin-left: -30px;
+    transition:  0.7s;
+
+}
+
+/*---------------------------section-------------------------------------*/
 section{
-    width: 75%;
+    width: 80%;
+    padding-top: 40px;
 }
-
+section h2{
+    margin: 10px 0;
+}
 section>.some-info{
     padding: 20px 0;
     padding-right: 20px;
@@ -159,6 +228,7 @@ section>.some-info{
     margin: 0;
     margin-bottom: 10px;
 }
+
 /*--------------------------------footer----------------------------------------------------
 ---------------------------------------------------------------------------------------------*/
 
@@ -168,6 +238,7 @@ footer{
     display: flex;
     position: absolute;
     bottom: 0;
+    height: 50px;
     flex-direction: row;
     justify-content: center;
 
@@ -199,4 +270,64 @@ footer{
 .icon.instagram{
     cursor: pointer;
     background-position:-140px -2px;
+}
+
+@media screen and (max-width: 850px){
+
+    aside>.aside-list{
+        margin-left: 10%;
+        zoom: 0.9;
+      
+    }
+    section{
+        width: 80%;
+        padding-top: 40px;
+        padding-left: 40px;
+    }
+
+    section>.some-info{
+        padding: 20px 0;
+        padding-right: 20px;
+        columns: 1;
+        text-align: justify;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px){
+    header{
+        display: block;
+        text-align: center;
+        padding: 20px 0;
+        background: rgba(147, 187, 255, 0.5);
+    
+    }
+    .header-search-block{
+        text-align: center;
+        width: auto;
+    
+    }
+    .header-mobile-menu{
+        margin-top: -105px;
+        float: right;
+    }
+    .main-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 70px;
+    }
+    aside{
+        text-align: center;
+        width: 100%;
+    }
+    aside>.aside-list{
+        margin-left: 0;
+        width: 100%;
+        zoom: 1;
+    }
+    section{
+        text-align: center;
+        padding-left: 0;
+    }
 }
