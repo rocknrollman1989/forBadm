@@ -1,8 +1,7 @@
 # forBadm
 
-simple app page; no-using js:(
+simple app page; 
 
-thank's to 
-<!--    Made by Erik Terwan    -->
-<!--   24th of November 2015   -->
-<!--        MIT License        --> - burg menu
+1) implemented simple search;
+2) implemented a simple select menu;
+3) no-using js library;
